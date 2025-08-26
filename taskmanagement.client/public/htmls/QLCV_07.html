@@ -1,0 +1,444 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-layout="vertical" data-topbar="light" data-sidebar="dark" data-sidebar-size="lg" data-sidebar-image="none" data-preloader="disable">
+<head>
+    <!-- ucMeta tag -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- ucMeta tag./. -->
+    <title>Quản lý Công việc Văn phòng</title>
+    <link href="assets/css/icons.min.css" rel="stylesheet" />
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/css/style.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- App Container -->
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="logo-main">
+                <img src="assets/img/team.png" />
+            </div>
+            <nav>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="QLCV_02.html" class="nav-link" data-page="dashboard">
+                            <i class="ri-dashboard-line"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="QLCV_03.html" class="nav-link" data-page="tasks">
+                            <i class="ri-task-line"></i>
+                            <span>Danh sách công việc</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="QLCV_04.html" class="nav-link" data-page="members">
+                            <i class="ri-user-line"></i>
+                            <span>Quản lý nhân viên</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="QLCV_05.html" class="nav-link" data-page="members">
+                            <i class="ri-bar-chart-grouped-line"></i>
+                            <span>Thống kê công việc</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="QLCV_08.html" class="nav-link" data-page="statistics">
+                            <i class="ri-chat-1-line"></i>
+                            <span>Phản hồi</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="QLCV_07.html" class="nav-link  active" data-page="settings">
+                            <i class="ri-settings-2-line"></i>
+                            <span>Cài đặt</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="QLCV_01.html" class="nav-link" data-page="login">
+                            <i class="ri-logout-box-line"></i>
+                            <span>Đăng xuất</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Header -->
+        <header class="header">
+            <h1> <i class="ri-settings-2-line"></i> Cài đặt</h1>
+            <div class="dropdown user-info">
+                <a href="#" class="d-flex align-items-center text-decoration-none dropdown-toggle" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="man.png" class="avatar" alt="Nguyễn Văn A">
+                    <span class="ms-2">Nguyễn Văn A</span>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                    <li><a class="dropdown-item" href="#"><i class="ri-user-line"></i> Thông tin cá nhân</a></li>
+                    <li><a class="dropdown-item" href="#"><i class="ri-lock-password-line"></i> Đổi mật khẩu</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item text-danger" href="QLCV_01.html"><i class="ri-logout-box-line"></i> Đăng xuất</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <!-- Breadcrumb -->
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Cài đặt</li>
+            </ol>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="setting-content">
+            <!-- Settings Page -->
+            <div class="settings-page">
+                <div class="settings-grid">
+                    <!-- Thông tin tài khoản -->
+                    <div class="settings-section">
+                        <div class="section-header">
+                            <h3 class="section-title">
+                                <i class="fas fa-user"></i>
+                                Thông tin tài khoản
+                            </h3>
+                        </div>
+                        <div class="section-content">
+                            <form id="account-form">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label class="form-label">Tên hiển thị</label>
+                                        <input type="text" class="form-control" value="Nguyễn Văn A" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Số điện thoại</label>
+                                        <input type="tel" class="form-control" value="0123456789">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Email</label>
+                                    <input type="email" class="form-control" value="nguyenvana@email.com" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Chức vụ</label>
+                                    <input type="text" class="form-control" value="Trưởng phòng IT" readonly>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Ảnh đại diện</label>
+                                    <div class="file-upload">
+                                        <input type="file" accept="image/*" id="avatar-upload">
+                                        <div class="file-upload-label">
+                                            <i class="fas fa-upload"></i>
+                                            <span>Chọn ảnh mới</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="fas fa-save"></i> Lưu thông tin
+                                </button>
+                            </form>
+                        </div>
+                        <!-- Message Box -->
+                        <div class="message-box mt-2 m-2">
+                            <div class="alert alert-primary alert-dismissible fade show" role="alert">
+                                <div class="ms-1">
+                                    <i class="ri-information-line"></i>
+                                    <span>Vui lòng điền đầy đủ thông tin trước khi tạo công việc mới.</span>
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                </div>
+                            </div>
+                            <div class="alert alert-success alert-dismissible fade show d-none" role="alert">
+                                <div class="ms-1">
+                                    <i class="ri-check-line"></i>
+                                    <span>Thêm công việc thành công.</span>
+                                </div>
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+                            <div class="alert alert-warning alert-dismissible fade show d-none">
+                                <div class="ms-1">
+                                    <i class="ri-alert-line"></i>
+                                    <span>Vui lòng điền đẩy đủ thông tin.</span>
+                                </div>
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+                            <div class="alert alert-danger alert-dismissible fade show d-none" role="alert">
+                                <div class="ms-1">
+                                    <i class="ri-alert-line"></i>
+                                    <span>Đã xảy ra lỗi khi thêm công việc. Vui lòng thử lại.</span>
+                                </div>
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Đổi mật khẩu -->
+                    <div class="settings-section">
+                        <div class="section-header">
+                            <h3 class="section-title">
+                                <i class="fas fa-lock"></i>
+                                Bảo mật
+                            </h3>
+                        </div>
+                        <div class="section-content">
+                            <form id="password-form">
+                                <div class="form-group">
+                                    <label class="form-label">Mật khẩu hiện tại</label>
+                                    <input type="password" class="form-control" placeholder="Nhập mật khẩu hiện tại" required>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label class="form-label">Mật khẩu mới</label>
+                                        <input type="password" class="form-control" placeholder="Nhập mật khẩu mới" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Xác nhận mật khẩu</label>
+                                        <input type="password" class="form-control" placeholder="Nhập lại mật khẩu mới" required>
+                                    </div>
+                                </div>
+                                <div class="settings-item">
+                                    <div class="settings-item-info">
+                                        <h4>Xác thực 2 bước</h4>
+                                        <p>Tăng cường bảo mật cho tài khoản của bạn</p>
+                                    </div>
+                                    <label class="toggle-switch">
+                                        <input type="checkbox" id="two-factor">
+                                        <span class="slider"></span>
+                                    </label>
+                                </div>
+                                <button type="submit" class="btn btn-primary mt-2">
+                                    <i class="fas fa-shield-alt"></i> Cập nhật mật khẩu
+                                </button>
+                            </form>
+                        </div>
+                        <!-- Message Box -->
+                        <div class="message-box mt-2 m-2">
+                            <div class="alert alert-primary alert-dismissible fade show" role="alert">
+                                <div class="ms-1">
+                                    <i class="ri-information-line"></i>
+                                    <span>Vui lòng điền đầy đủ thông tin trước khi tạo công việc mới.</span>
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                </div>
+                            </div>
+                            <div class="alert alert-success alert-dismissible fade show d-none" role="alert">
+                                <div class="ms-1">
+                                    <i class="ri-check-line"></i>
+                                    <span>Thêm công việc thành công.</span>
+                                </div>
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+                            <div class="alert alert-warning alert-dismissible fade show d-none">
+                                <div class="ms-1">
+                                    <i class="ri-alert-line"></i>
+                                    <span>Vui lòng điền đẩy đủ thông tin.</span>
+                                </div>
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+                            <div class="alert alert-danger alert-dismissible fade show d-none" role="alert">
+                                <div class="ms-1">
+                                    <i class="ri-alert-line"></i>
+                                    <span>Đã xảy ra lỗi khi thêm công việc. Vui lòng thử lại.</span>
+                                </div>
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cài đặt thông báo -->
+                    <div class="settings-section">
+                        <div class="section-header">
+                            <h3 class="section-title">
+                                <i class="fas fa-bell"></i>
+                                Thông báo
+                            </h3>
+                        </div>
+                        <div class="section-content">
+                            <div class="settings-item">
+                                <div class="settings-item-info">
+                                    <h4>Thông báo email</h4>
+                                    <p>Nhận thông báo qua email khi có công việc mới</p>
+                                </div>
+                                <label class="toggle-switch">
+                                    <input type="checkbox" id="email-notifications" checked>
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                            <div class="settings-item">
+                                <div class="settings-item-info">
+                                    <h4>Thông báo đẩy</h4>
+                                    <p>Nhận thông báo đẩy trên trình duyệt</p>
+                                </div>
+                                <label class="toggle-switch">
+                                    <input type="checkbox" id="push-notifications" checked>
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                            <div class="settings-item">
+                                <div class="settings-item-info">
+                                    <h4>Nhắc nhở deadline</h4>
+                                    <p>Nhận thông báo trước khi công việc đến hạn</p>
+                                </div>
+                                <select class="form-control" style="width: 150px;">
+                                    <option value="1">1 ngày trước</option>
+                                    <option value="2" selected>2 ngày trước</option>
+                                    <option value="3">3 ngày trước</option>
+                                    <option value="7">1 tuần trước</option>
+                                </select>
+                            </div>
+                            <div class="settings-item">
+                                <div class="settings-item-info">
+                                    <h4>Báo cáo tuần</h4>
+                                    <p>Nhận báo cáo tổng kết công việc hàng tuần</p>
+                                </div>
+                                <label class="toggle-switch">
+                                    <input type="checkbox" id="weekly-report">
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Giao diện -->
+                    <div class="settings-section">
+                        <div class="section-header">
+                            <h3 class="section-title">
+                                <i class="fas fa-palette"></i>
+                                Giao diện
+                            </h3>
+                        </div>
+                        <div class="section-content">
+                            <div class="settings-item">
+                                <div class="settings-item-info">
+                                    <h4>Chế độ tối</h4>
+                                    <p>Chuyển sang giao diện tối để bảo vệ mắt</p>
+                                </div>
+                                <label class="toggle-switch">
+                                    <input type="checkbox" id="dark-mode">
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Màu chủ đạo</label>
+                                <div class="color-picker">
+                                    <div class="color-option selected" style="background: #007BFF;" data-color="#007BFF"></div>
+                                    <div class="color-option" style="background: #28a745;" data-color="#28a745"></div>
+                                    <div class="color-option" style="background: #dc3545;" data-color="#dc3545"></div>
+                                    <div class="color-option" style="background: #ffc107;" data-color="#ffc107"></div>
+                                    <div class="color-option" style="background: #6f42c1;" data-color="#6f42c1"></div>
+                                    <div class="color-option" style="background: #fd7e14;" data-color="#fd7e14"></div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Ngôn ngữ</label>
+                                <select class="form-control">
+                                    <option value="vi" selected>Tiếng Việt</option>
+                                    <option value="en">English</option>
+                                    <option value="ja">日本語</option>
+                                    <option value="ko">한국어</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cài đặt hệ thống -->
+                    <div class="settings-section">
+                        <div class="section-header">
+                            <h3 class="section-title">
+                                <i class="fas fa-cogs"></i>
+                                Hệ thống
+                            </h3>
+                        </div>
+                        <div class="section-content">
+                            <div class="settings-item">
+                                <div class="settings-item-info">
+                                    <h4>Tự động lưu</h4>
+                                    <p>Tự động lưu thay đổi khi chỉnh sửa</p>
+                                </div>
+                                <label class="toggle-switch">
+                                    <input type="checkbox" id="auto-save" checked>
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Múi giờ</label>
+                                <select class="form-control">
+                                    <option value="Asia/Ho_Chi_Minh" selected>Việt Nam (GMT+7)</option>
+                                    <option value="Asia/Tokyo">Tokyo (GMT+9)</option>
+                                    <option value="America/New_York">New York (GMT-5)</option>
+                                    <option value="Europe/London">London (GMT+0)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Định dạng ngày</label>
+                                <select class="form-control">
+                                    <option value="dd/mm/yyyy" selected>DD/MM/YYYY</option>
+                                    <option value="mm/dd/yyyy">MM/DD/YYYY</option>
+                                    <option value="yyyy-mm-dd">YYYY-MM-DD</option>
+                                </select>
+                            </div>
+                            <div class="settings-item">
+                                <div class="settings-item-info">
+                                    <h4>Sao lưu dữ liệu</h4>
+                                    <p>Sao lưu dữ liệu định kỳ hàng ngày</p>
+                                </div>
+                                <button class="btn btn-secondary">
+                                    <i class="fas fa-download"></i> Tải xuống
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Về chúng tôi -->
+                    <div class="settings-section">
+                        <div class="section-header">
+                            <h3 class="section-title">
+                                <i class="fas fa-info-circle"></i>
+                                Thông tin ứng dụng
+                            </h3>
+                        </div>
+                        <div class="section-content">
+                            <div class="settings-item">
+                                <div class="settings-item-info">
+                                    <h4>Phiên bản</h4>
+                                    <p>TaskPro v2.1.0</p>
+                                </div>
+                                <button class="btn btn-secondary">
+                                    <i class="fas fa-sync"></i> Kiểm tra cập nhật
+                                </button>
+                            </div>
+                            <div class="settings-item">
+                                <div class="settings-item-info">
+                                    <h4>Hỗ trợ</h4>
+                                    <p>Liên hệ với đội ngũ hỗ trợ</p>
+                                </div>
+                                <button class="btn btn-primary">
+                                    <i class="fas fa-headset"></i> Liên hệ
+                                </button>
+                            </div>
+                            <div class="settings-item">
+                                <div class="settings-item-info">
+                                    <h4>Điều khoản sử dụng</h4>
+                                    <p>Xem điều khoản và chính sách bảo mật</p>
+                                </div>
+                                <button class="btn btn-secondary">
+                                    <i class="fas fa-file-alt"></i> Xem chi tiết
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+     <!-- Scripts -->
+    <section id="Scripts">
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/remix-icons-listing.js"></script>
+        <script src="assets/js/chart.min.js"></script>
+        <script src="assets/js/script.js"></script>
+    </section>
+    <!-- Scripts./ -->
+</body>
+</html>

@@ -1,0 +1,420 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-layout="vertical" data-topbar="light" data-sidebar="dark" data-sidebar-size="lg" data-sidebar-image="none" data-preloader="disable">
+<head>
+    <!-- ucMeta tag -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- ucMeta tag./. -->
+    <title>Quản lý Công việc Văn phòng</title>
+    <link href="assets/css/icons.min.css" rel="stylesheet" />
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/css/style.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- App Container -->
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="logo-main">
+                <img src="assets/img/team.png" />
+            </div>
+            <nav>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="QLCV_02.html" class="nav-link " data-page="dashboard">
+                            <i class="ri-dashboard-line"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="QLCV_03.html" class="nav-link active" data-page="tasks">
+                            <i class="ri-task-line"></i>
+                            <span>Danh sách công việc</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="QLCV_04.html" class="nav-link" data-page="members">
+                            <i class="ri-user-line"></i>
+                            <span>Quản lý nhân viên</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="QLCV_05.html" class="nav-link" data-page="members">
+                            <i class="ri-bar-chart-grouped-line"></i>
+                            <span>Thống kê công việc</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="QLCV_08.html" class="nav-link" data-page="statistics">
+                            <i class="ri-chat-1-line"></i>
+                            <span>Phản hồi</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="QLCV_07.html" class="nav-link" data-page="settings">
+                            <i class="ri-settings-2-line"></i>
+                            <span>Cài đặt</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="QLCV_01.html" class="nav-link" data-page="login">
+                            <i class="ri-logout-box-line"></i>
+                            <span>Đăng xuất</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Header -->
+        <header class="header">
+            <h1><i class="ri-file-list-3-fill"></i> Danh sách công việc</h1>
+            <a href="QLCV_06.html" class="btn btn-primary">
+                <i class="ri-add-line"></i> Tạo công việc mới
+            </a>
+        </header>
+        <!-- Breadcrumb -->
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Danh sách công việc</li>
+            </ol>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="listwork-content">
+            <!-- Status Summary -->
+            <div class="status-summary">
+                <div class="summary-item">
+                    <h4>3</h4>
+                    <p>Chưa bắt đầu</p>
+                </div>
+                <div class="summary-item">
+                    <h4>2</h4>
+                    <p>Đang thực hiện</p>
+                </div>
+                <div class="summary-item">
+                    <h4>1</h4>
+                    <p>Hoàn thành</p>
+                </div>
+            </div>
+
+            <!-- Filter Section -->
+            <div class="table-container">
+                <div class="section-header">
+                    <div class="flex items-center gap-10">
+                        <div class="select-with-icon">
+                            <i class="ri-list-ordered"></i>
+                            <select class="form-control">
+                                <option>Tất cả trạng thái</option>
+                                <option>Chưa bắt đầu</option>
+                                <option>Đang thực hiện</option>
+                                <option>Hoàn thành</option>
+                            </select>
+                        </div>
+
+                        <div class="select-with-icon">
+                            <i class="ri-list-ordered"></i>
+                            <select class="form-control">
+                                <option>Tất cả mức độ</option>
+                                <option>Cao</option>
+                                <option>Trung bình</option>
+                                <option>Thấp</option>
+                            </select>
+                        </div>
+
+                        <div class="search-input">
+                            <i class="ri-search-line"></i>
+                            <input type="text" class="form-control" placeholder="Tìm kiếm...">
+                        </div>
+
+                        <button class="btn btn-primary">
+                            <i class="ri-equalizer-line"></i>
+                            Lọc
+                        </button>
+
+                        <button class="btn btn-secondary">
+                            <i class="ri-delete-back-2-line"></i>
+                            Xóa
+                        </button>
+                    </div>
+                    <small style="color: #666;">Cập nhật lần cuối: 14:15 PM, 28/06/2025</small>
+                </div>
+            </div>
+
+            <!-- Tasks Table -->
+            <div class="table-container">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Công việc</th>
+                            <th>Người phụ trách</th>
+                            <th>Ngày đến hạn</th>
+                            <th>Mức độ</th>
+                            <th>Trạng thái</th>
+                            <th>Hành động</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="task-title">Chuẩn bị báo cáo tháng 6</div>
+                                <div style="font-size: 12px; color: #666;">Tổng hợp và phân tích dữ liệu...</div>
+                            </td>
+                            <td>
+                                <div class="infor">
+                                    <img src="man.png" class="avatar" alt="Nguyễn Văn A">
+                                    Nguyễn Văn A
+                                </div>
+                            </td>
+                            <td>30/06/2025</td>
+                            <td><span class="priority-high">Cao</span></td>
+                            <td><span class="status-badge status-progress">Đang thực hiện</span></td>
+                            <td class="text-center">
+                                <div class="dropdown dropdown-action">
+                                    <a href="#" class="btn btn-soft-primary btn-sm dropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="ri-menu-line"></i>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-end">
+                                        <li>
+                                            <a href="#" class="dropdown-item view-item-btn text-primary">
+                                                <i class="ri-eye-fill fs-16"></i>Xem chi tiết
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown-item edit-item-btn text-warning">
+                                                <i class="ri-edit-fill fs-16"></i>Chỉnh sửa
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown-item active-item-btn text-success">
+                                                <i class="ri-lock-unlock-fill fs-16"></i>Kích hoạt
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown-item lock-item-btn text-body-tertiary">
+                                                <i class="ri-lock-fill fs-16"></i>Tạm khóa
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown-item remove-item-btn text-danger">
+                                                <i class="ri-delete-bin-5-fill fs-16"></i>Xóa bỏ
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="task-title">Họp team weekly</div>
+                                <div style="font-size: 12px; color: #666;">Cuộc họp định kỳ hàng tuần...</div>
+                            </td>
+                            <td>
+                                <div class="infor">
+                                    <img src="man.png" class="avatar" alt="Trần Thị B">
+                                    Trần Thị B
+                                </div>
+                            </td>
+                            <td>28/06/2025</td>
+                            <td><span class="priority-medium">Trung bình</span></td>
+                            <td><span class="status-badge status-todo">Chưa bắt đầu</span></td>
+                            <td class="text-center">
+                                <div class="dropdown dropdown-action">
+                                    <a href="#" class="btn btn-soft-primary btn-sm dropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="ri-menu-line"></i>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-end">
+                                        <li>
+                                            <a href="#" class="dropdown-item view-item-btn text-primary">
+                                                <i class="ri-eye-fill fs-16"></i>Xem chi tiết
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown-item edit-item-btn text-warning">
+                                                <i class="ri-edit-fill fs-16"></i>Chỉnh sửa
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown-item active-item-btn text-success">
+                                                <i class="ri-lock-unlock-fill fs-16"></i>Kích hoạt
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown-item lock-item-btn text-body-tertiary">
+                                                <i class="ri-lock-fill fs-16"></i>Tạm khóa
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown-item remove-item-btn text-danger">
+                                                <i class="ri-delete-bin-5-fill fs-16"></i>Xóa bỏ
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="task-title">Review code module đăng nhập</div>
+                                <div style="font-size: 12px; color: #666;">Kiểm tra và review code...</div>
+                            </td>
+                            <td>
+                                <div class="infor">
+                                    <img src="man.png" class="avatar" alt="Lê Văn C">
+                                    Lê Văn C
+                                </div>
+                            </td>
+                            <td>25/06/2025</td>
+                            <td><span class="priority-low">Thấp</span></td>
+                            <td><span class="status-badge status-done">Hoàn thành</span></td>
+                            <td class="text-center">
+                                <div class="dropdown dropdown-action">
+                                    <a href="#" class="btn btn-soft-primary btn-sm dropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="ri-menu-line"></i>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-end">
+                                        <li>
+                                            <a href="#" class="dropdown-item view-item-btn text-primary">
+                                                <i class="ri-eye-fill fs-16"></i>Xem chi tiết
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown-item edit-item-btn text-warning">
+                                                <i class="ri-edit-fill fs-16"></i>Chỉnh sửa
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown-item active-item-btn text-success">
+                                                <i class="ri-lock-unlock-fill fs-16"></i>Kích hoạt
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown-item lock-item-btn text-body-tertiary">
+                                                <i class="ri-lock-fill fs-16"></i>Tạm khóa
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown-item remove-item-btn text-danger">
+                                                <i class="ri-delete-bin-5-fill fs-16"></i>Xóa bỏ
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="task-title">Phát triển tính năng chat</div>
+                                <div style="font-size: 12px; color: #666;">Xây dựng hệ thống chat real-time...</div>
+                            </td>
+                            <td>
+                                <div class="infor">
+                                    <img src="man.png" class="avatar" alt="Phạm Văn D">
+                                    Phạm Văn D
+                                </div>
+                            </td>
+                            <td>15/07/2025</td>
+                            <td><span class="priority-high">Cao</span></td>
+                            <td><span class="status-badge status-todo">Chưa bắt đầu</span></td>
+                            <td class="text-center">
+                                <div class="dropdown dropdown-action">
+                                    <a href="#" class="btn btn-soft-primary btn-sm dropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="ri-menu-line"></i>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-end">
+                                        <li>
+                                            <a href="#" class="dropdown-item view-item-btn text-primary">
+                                                <i class="ri-eye-fill fs-16"></i>Xem chi tiết
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown-item edit-item-btn text-warning">
+                                                <i class="ri-edit-fill fs-16"></i>Chỉnh sửa
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown-item active-item-btn text-success">
+                                                <i class="ri-lock-unlock-fill fs-16"></i>Kích hoạt
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown-item lock-item-btn text-body-tertiary">
+                                                <i class="ri-lock-fill fs-16"></i>Tạm khóa
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown-item remove-item-btn text-danger">
+                                                <i class="ri-delete-bin-5-fill fs-16"></i>Xóa bỏ
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="task-title">Tối ưu hóa database</div>
+                                <div style="font-size: 12px; color: #666;">Cải thiện hiệu suất truy vấn...</div>
+                            </td>
+                            <td>
+                                <div class="infor">
+                                    <img src="man.png" class="avatar" alt="Hoàng Thị E">
+                                    Hoàng Thị E
+                                </div>
+                            </td>
+                            <td>10/07/2025</td>
+                            <td><span class="priority-medium">Trung bình</span></td>
+                            <td><span class="status-badge status-progress">Đang thực hiện</span></td>
+                            <td class="text-center">
+                                <div class="dropdown dropdown-action">
+                                    <a href="#" class="btn btn-soft-primary btn-sm dropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="ri-menu-line"></i>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-end">
+                                        <li>
+                                            <a href="#" class="dropdown-item view-item-btn text-primary">
+                                                <i class="ri-eye-fill fs-16"></i>Xem chi tiết
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown-item edit-item-btn text-warning">
+                                                <i class="ri-edit-fill fs-16"></i>Chỉnh sửa
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown-item active-item-btn text-success">
+                                                <i class="ri-lock-unlock-fill fs-16"></i>Kích hoạt
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown-item lock-item-btn text-body-tertiary">
+                                                <i class="ri-lock-fill fs-16"></i>Tạm khóa
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown-item remove-item-btn text-danger">
+                                                <i class="ri-delete-bin-5-fill fs-16"></i>Xóa bỏ
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <section id="Scripts">
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/remix-icons-listing.js"></script>
+        <script src="assets/js/chart.min.js"></script>
+        <script src="assets/js/script.js"></script>
+    </section>
+    <!-- Scripts./ -->
+</body>
+</html>
