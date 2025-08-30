@@ -83,6 +83,9 @@ npm start
 
 -----
 
+<img width="1904" height="887" alt="image" src="https://github.com/user-attachments/assets/c77eda50-495c-471f-831a-288529ca8c4d" />
+
+-----
 
 <img width="1920" height="1195" alt="screencapture-localhost-61604-project-list-2025-08-26-20_51_31" src="https://github.com/user-attachments/assets/e737ae2e-bc46-460d-a93e-81ec3f6d42a4" />
 
