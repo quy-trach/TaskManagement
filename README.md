@@ -88,23 +88,27 @@ npm start
 Quy Trach - https://github.com/quy-trach
 
 ## 🖼️ Image
-<img width="1881" height="892" alt="Ảnh chụp màn hình 2025-08-26 205208" src="https://github.com/user-attachments/assets/29d11681-d703-47b3-b9f1-7f13bd9c63a9" />
+<img width="1919" height="907" alt="image" src="https://github.com/user-attachments/assets/e09362c6-b406-4f55-a8f6-c78a3149d0a7" />
+
 
 -----
 
-<img width="1904" height="887" alt="image" src="https://github.com/user-attachments/assets/c77eda50-495c-471f-831a-288529ca8c4d" />
+<img width="1901" height="914" alt="image" src="https://github.com/user-attachments/assets/2c0c5f98-08ce-43bd-9079-c3ae092711c1" />
+
+
+-----
+<img width="1901" height="877" alt="image" src="https://github.com/user-attachments/assets/eab2b5ad-9883-4b09-bc3c-16d4df39496e" />
+
 
 -----
 
-<img width="1920" height="1195" alt="screencapture-localhost-61604-project-list-2025-08-26-20_51_31" src="https://github.com/user-attachments/assets/e737ae2e-bc46-460d-a93e-81ec3f6d42a4" />
+<img width="1888" height="903" alt="image" src="https://github.com/user-attachments/assets/e292fb81-f8b0-4dbc-b308-1481acfa8302" />
 
------
-
-<img width="1905" height="891" alt="Ảnh chụp màn hình 2025-08-26 205225" src="https://github.com/user-attachments/assets/ba7a63ae-aa68-4e3c-b6aa-f499a1e5f65b" />
 
 -----
 
 
-<img width="1893" height="878" alt="Ảnh chụp màn hình 2025-08-26 205239" src="https://github.com/user-attachments/assets/9ec8cd4b-1d6a-4318-916c-2cbbc18e3940" />
+<img width="1888" height="903" alt="image" src="https://github.com/user-attachments/assets/11e1a442-3f93-4a9e-9232-7d8743766275" />
+
 
 
