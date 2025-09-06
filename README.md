@@ -1,7 +1,3 @@
-Ah, understood! Here's the **professional and humble English version** of your README, reflecting that it’s a student project and the chat feature is still in development:
-
----
-
 # 📝 Task Management System with Real-time Chat
 
 **Task Management System** is a web application designed to help organizations manage tasks and assignments more efficiently.
