@@ -1,0 +1,260 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-layout="vertical" data-topbar="light" data-sidebar="dark" data-sidebar-size="lg" data-sidebar-image="none" data-preloader="disable">
+<head>
+    <!-- ucMeta tag -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- ucMeta tag./. -->
+    <title>Quản lý Công việc Văn phòng</title>
+    <link href="assets/css/icons.min.css" rel="stylesheet" />
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/css/style.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- App Container -->
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="logo-main">
+                <img src="assets/img/team.png" />
+            </div>
+            <nav>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="QLCV_02.html" class="nav-link active" data-page="dashboard">
+                            <i class="ri-dashboard-line"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="QLCV_03.html" class="nav-link" data-page="tasks">
+                            <i class="ri-task-line"></i>
+                            <span>Danh sách công việc</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="QLCV_04.html" class="nav-link" data-page="members">
+                            <i class="ri-user-line"></i>
+                            <span>Quản lý nhân viên</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="QLCV_05.html" class="nav-link" data-page="members">
+                            <i class="ri-bar-chart-grouped-line"></i>
+                            <span>Thống kê công việc</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="QLCV_08.html" class="nav-link" data-page="statistics">
+                            <i class="ri-chat-1-line"></i>
+                            <span>Phản hồi</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="QLCV_07.html" class="nav-link" data-page="settings">
+                            <i class="ri-settings-2-line"></i>
+                            <span>Cài đặt</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="QLCV_01.html" class="nav-link" data-page="login">
+                            <i class="ri-logout-box-line"></i>
+                            <span>Đăng xuất</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Header -->
+        <header class="header">
+            <h1><i class="ri-dashboard-line"></i> Dashboard</h1>
+            <div class="dropdown user-info">
+                <a href="#" class="d-flex align-items-center text-decoration-none dropdown-toggle" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="man.png" class="avatar" alt="Nguyễn Văn A">
+                    <span class="ms-2">Nguyễn Văn A</span>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                    <li><a class="dropdown-item" href="QLCV_07.html"><i class="ri-user-line"></i> Thông tin cá nhân</a></li>
+                    <li><a class="dropdown-item" href="QLCV_07.html"><i class="ri-lock-password-line"></i> Đổi mật khẩu</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item text-danger" href="QLCV_01.html"><i class="ri-logout-box-line"></i> Đăng xuất</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <!-- Breadcrumb -->
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+            </ol>
+        </nav>
+        <!-- Main Content -->
+        <main class="dashboard-content">
+            <!-- Dashboard Page -->
+            <div id="dashboard-page" class="page">
+                <!-- Header -->
+                <!-- Welcome Message -->
+                <div class="table-container mb-20">
+                    <div class="section-header">
+                        <h3 class="section-title">Chào mừng bạn đến với BizManage!</h3>
+                        <p style="color: #666;">Quản lý công việc dễ dàng và hiệu quả hơn bao giờ hết.</p>
+                    </div>
+                </div>
+
+                <!-- Stats Grid -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <i class="ri-task-line stat-icon"></i>
+                        <div>
+                            <div class="stat-number">24</div>
+                            <div class="stat-label">Tổng công việc</div>
+                        </div>
+                    </div>
+                    <div class="stat-card orange">
+                        <i class="ri-loader-2-line stat-icon"></i>
+                        <div>
+                            <div class="stat-number">8</div>
+                            <div class="stat-label">Đang thực hiện</div>
+                        </div>
+                    </div>
+                    <div class="stat-card green">
+                        <i class="ri-checkbox-circle-line stat-icon"></i>
+                        <div>
+                            <div class="stat-number">12</div>
+                            <div class="stat-label">Hoàn thành</div>
+                        </div>
+                    </div>
+                    <div class="stat-card yellow">
+                        <i class="ri-error-warning-line stat-icon"></i>
+                        <div>
+                            <div class="stat-number">4</div>
+                            <div class="stat-label">Quá hạn</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Progress Section -->
+                <div class="progress-section">
+                    <div class="section-header">
+                        <h3 class="section-title">Tiến độ công việc</h3>
+                    </div>
+                    <div style="padding: 20px;">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 50%;"></div>
+                        </div>
+                        <p style="font-size: 14px; color: #666; margin-top: 10px;">50% công việc đã hoàn thành</p>
+                    </div>
+                </div>
+
+                <!-- Content Grid -->
+                <div class="content-grid">
+                    <div class="task-section">
+                        <div class="section-header">
+                            <h3 class="section-title">Công việc gần đây</h3>
+                            <a href="#" class="btn btn-primary" onclick="showPage('tasks')">
+                                <i class="ri-add-line"></i> Tạo mới
+                            </a>
+                        </div>
+                        <div class="task-list">
+                            <div class="task-card">
+                                <img src="man.png" class="avatar" alt="Nguyễn Văn A">
+                                <div style="flex: 1;">
+                                    <div class="task-title">Chuẩn bị báo cáo tháng 6</div>
+                                    <div class="task-meta">
+                                        <span><i class="ri-calendar-line"></i> 30/06/2025</span>
+                                        <span><i class="ri-user-line"></i> Nguyễn Văn A</span>
+                                        <span class="priority-high"><i class="ri-flag-line"></i> Cao</span>
+                                    </div>
+                                    <span class="status-badge status-progress">Đang thực hiện</span>
+                                </div>
+                            </div>
+                            <div class="task-card">
+                                <img src="man.png" class="avatar" alt="Trần Thị B">
+                                <div style="flex: 1;">
+                                    <div class="task-title">Họp team weekly</div>
+                                    <div class="task-meta">
+                                        <span><i class="ri-calendar-line"></i> 28/06/2025</span>
+                                        <span><i class="ri-user-line"></i> Trần Thị B</span>
+                                        <span class="priority-medium"><i class="ri-flag-line"></i> Trung bình</span>
+                                    </div>
+                                    <span class="status-badge status-todo">Chưa bắt đầu</span>
+                                </div>
+                            </div>
+                            <div class="task-card">
+                                <img src="man.png" class="avatar" alt="Lê Văn C">
+                                <div style="flex: 1;">
+                                    <div class="task-title">Review code module đăng nhập</div>
+                                    <div class="task-meta">
+                                        <span><i class="ri-calendar-line"></i> 25/06/2025</span>
+                                        <span><i class="ri-user-line"></i> Lê Văn C</span>
+                                        <span class="priority-low"><i class="ri-flag-line"></i> Thấp</span>
+                                    </div>
+                                    <span class="status-badge status-done">Hoàn thành</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="notification-section">
+                        <div class="section-header">
+                            <h3 class="section-title">Thông báo</h3>
+                        </div>
+                        <div class="task-list">
+                            <div class="task-card">
+                                <img src="man.png" class="avatar" alt="Nguyễn Văn A">
+                                <div style="flex: 1;">
+                                    <div class="task-title">⚠️ Công việc sắp đến hạn</div>
+                                    <p style="font-size: 14px; color: #666; margin-top: 8px;">
+                                        "Chuẩn bị báo cáo tháng 6" sẽ đến hạn trong 2 ngày
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="task-card">
+                                <img src="man.png" class="avatar" alt="Lê Văn C">
+                                <div style="flex: 1;">
+                                    <div class="task-title">✅ Công việc hoàn thành</div>
+                                    <p style="font-size: 14px; color: #666; margin-top: 8px;">
+                                        Lê Văn C đã hoàn thành "Review code module đăng nhập"
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Quick Task Form -->
+                        <div class="quick-task">
+                            <div class="form-group">
+                                <label class="form-label">Thêm công việc nhanh</label>
+                                <input type="text" class="form-control" placeholder="Nhập tiêu đề công việc...">
+                            </div>
+                            <button class="btn btn-primary" style="width: 100%;">
+                                <i class="ri-add-line"></i> Thêm ngay
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tasks Page -->
+            <div id="tasks-page" class="page hidden">
+                <header class="header">
+                    <h1><i class="ri-task-line"></i> Danh sách công việc</h1>
+                    <button class="btn btn-primary" onclick="openModal('task-modal')">
+                        <i class="ri-add-line"></i> Tạo công việc mới
+                    </button>
+                </header>
+            </div>
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <section id="Scripts">
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/remix-icons-listing.js"></script>
+        <script src="assets/js/chart.min.js"></script>
+        <script src="assets/js/script.js"></script>
+    </section>
+    <!-- Scripts./ -->
+</body>
+</html>

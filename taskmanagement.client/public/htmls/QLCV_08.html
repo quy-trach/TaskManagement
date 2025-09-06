@@ -1,0 +1,180 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-layout="vertical" data-topbar="light" data-sidebar="dark" data-sidebar-size="lg" data-sidebar-image="none" data-preloader="disable">
+<head>
+    <!-- ucMeta tag -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- ucMeta tag./. -->
+    <title>Quản lý Công việc Văn phòng</title>
+    <link href="assets/css/icons.min.css" rel="stylesheet" />
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/css/style.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="logo-main">
+                <img src="assets/img/team.png" />
+            </div>
+            <nav>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="QLCV_02.html" class="nav-link" data-page="dashboard">
+                            <i class="ri-dashboard-line"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="QLCV_03.html" class="nav-link" data-page="tasks">
+                            <i class="ri-task-line"></i>
+                            <span>Danh sách công việc</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="QLCV_04.html" class="nav-link" data-page="members">
+                            <i class="ri-user-line"></i>
+                            <span>Quản lý nhân viên</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="QLCV_05.html" class="nav-link" data-page="members">
+                            <i class="ri-bar-chart-grouped-line"></i>
+                            <span>Thống kê công việc</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="QLCV_08.html" class="nav-link active" data-page="statistics">
+                            <i class="ri-chat-1-line"></i>
+                            <span>Phản hồi</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="QLCV_07.html" class="nav-link" data-page="settings">
+                            <i class="ri-settings-2-line"></i>
+                            <span>Cài đặt</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="QLCV_01.html" class="nav-link" data-page="login">
+                            <i class="ri-logout-box-line"></i>
+                            <span>Đăng xuất</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Header -->
+        <header class="header">
+            <h1> <i class="ri-chat-1-line"></i> Phản hồi</h1>
+            <div class="dropdown user-info">
+                <a href="#" class="d-flex align-items-center text-decoration-none dropdown-toggle" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="man.png" class="avatar" alt="Nguyễn Văn A">
+                    <span class="ms-2">Nguyễn Văn A</span>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                    <li><a class="dropdown-item" href="QLCV_07.html"><i class="ri-user-line"></i> Thông tin cá nhân</a></li>
+                    <li><a class="dropdown-item" href="QLCV_07.html"><i class="ri-lock-password-line"></i> Đổi mật khẩu</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item text-danger" href="QLCV_01.html"><i class="ri-logout-box-line"></i> Đăng xuất</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <!-- Breadcrumb -->
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Phản hồi</li>
+            </ol>
+        </nav>
+
+        <main class="feedback-page">
+            <div class="feedback-section">
+                <div class="feedback-header">
+                    <h2><i class="fas fa-comments"></i> Phản hồi từ nhân viên</h2>
+                    <p>Câu hỏi và thắc mắc về công việc từ người thực hiện</p>
+                </div>
+                <div class="feedback-body">
+                    <div class="feedback-form">
+                        <h4>Gửi thắc mắc về công việc</h4>
+                        <form id="feedbackForm">
+                            <select name="task" required>
+                                <option value="" disabled selected>Chọn công việc</option>
+                                <option value="task1">Báo cáo tài chính Q3</option>
+                                <option value="task2">Chiến dịch Marketing tháng 10</option>
+                                <option value="task3">Cập nhật hệ thống ERP</option>
+                                <option value="task4">Đào tạo nhân viên mới</option>
+                            </select>
+                            <textarea name="message" placeholder="Nhập thắc mắc của bạn..." required></textarea>
+                            <button type="submit">Gửi phản hồi</button>
+                        </form>
+                    </div>
+                    <div class="feedback-stats">
+                        <div class="feedback-stat">
+                            <div class="feedback-stat-value">34</div>
+                            <div class="feedback-stat-label">Phản hồi tháng này</div>
+                        </div>
+                        <div class="feedback-stat">
+                            <div class="feedback-stat-value">12</div>
+                            <div class="feedback-stat-label">Đang chờ trả lời</div>
+                        </div>
+                        <div class="feedback-stat">
+                            <div class="feedback-stat-value">22</div>
+                            <div class="feedback-stat-label">Đã trả lời</div>
+                        </div>
+                        <div class="feedback-stat">
+                            <div class="feedback-stat-value">3.2h</div>
+                            <div class="feedback-stat-label">Thời gian phản hồi TB</div>
+                        </div>
+                    </div>
+                    <div class="recent-feedback">
+                        <h4 style="margin-bottom: 15px; color: #333;">Phản hồi gần đây</h4>
+                        <div class="feedback-item">
+                            <div class="feedback-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="feedback-details">
+                                <div class="feedback-header-info">
+                                    <span class="feedback-name">Nguyễn Văn A</span>
+                                    <span class="feedback-time">2 giờ trước</span>
+                                </div>
+                                <div class="feedback-message">
+                                    "Tôi cần làm rõ về yêu cầu báo cáo tháng này. Có cần bao gồm số liệu quý trước không?"
+                                </div>
+                                <div class="feedback-status pending">Chờ trả lời</div>
+                            </div>
+                        </div>
+                        <div class="feedback-item">
+                            <div class="feedback-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="feedback-details">
+                                <div class="feedback-header-info">
+                                    <span class="feedback-name">Trần Thị B</span>
+                                    <span class="feedback-time">1 ngày trước</span>
+                                </div>
+                                <div class="feedback-message">
+                                    "Deadline có thể gia hạn thêm 2 ngày được không? Tôi cần thêm thời gian để hoàn thiện phần phân tích."
+                                </div>
+                                <div class="feedback-status answered">Đã trả lời</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <section id="Scripts">
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/remix-icons-listing.js"></script>
+        <script src="assets/js/chart.min.js"></script>
+        <script src="assets/js/script.js"></script>
+    </section>
+    <!-- Scripts./ -->
+</body>
+</html>

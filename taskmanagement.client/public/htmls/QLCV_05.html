@@ -1,0 +1,211 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-layout="vertical" data-topbar="light" data-sidebar="dark" data-sidebar-size="lg" data-sidebar-image="none" data-preloader="disable">
+<head>
+    <!-- ucMeta tag -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- ucMeta tag./. -->
+    <title>Quản lý Công việc Văn phòng</title>
+    <link href="assets/css/icons.min.css" rel="stylesheet" />
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/css/style.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- App Container -->
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="logo-main">
+                <img src="assets/img/team.png" />
+            </div>
+            <nav>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="QLCV_02.html" class="nav-link " data-page="dashboard">
+                            <i class="ri-dashboard-line"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="QLCV_03.html" class="nav-link" data-page="tasks">
+                            <i class="ri-task-line"></i>
+                            <span>Danh sách công việc</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="QLCV_04.html" class="nav-link" data-page="members">
+                            <i class="ri-user-line"></i>
+                            <span>Quản lý nhân viên</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="QLCV_05.html" class="nav-link active" data-page="members">
+                            <i class="ri-bar-chart-grouped-line"></i>
+                            <span>Thống kê công việc</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="QLCV_08.html" class="nav-link" data-page="statistics">
+                            <i class="ri-chat-1-line"></i>
+                            <span>Phản hồi</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="QLCV_07.html" class="nav-link" data-page="settings">
+                            <i class="ri-settings-2-line"></i>
+                            <span>Cài đặt</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="QLCV_01.html" class="nav-link" data-page="login">
+                            <i class="ri-logout-box-line"></i>
+                            <span>Đăng xuất</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Header -->
+        <header class="header">
+            <h1><i class="ri-bar-chart-2-line"></i> Thống kê công việc</h1>
+        </header>
+
+        <!-- Breadcrumb -->
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Thống kê</li>
+            </ol>
+        </nav>
+        <!-- Main Content -->
+        <main class="stats-content">
+
+            <!-- Stats Cards -->
+            <div class="stats-grid">
+                <div class="stat-card pending">
+                    <div class="stat-icon">
+                        <i class="ri-time-line"></i>
+                    </div>
+                    <div class="stat-value">24</div>
+                    <div class="stat-label">Chưa hoàn thành</div>
+                </div>
+
+                <div class="stat-card in-progress">
+                    <div class="stat-icon">
+                        <i class="ri-loader-2-line"></i>
+                    </div>
+                    <div class="stat-value">18</div>
+                    <div class="stat-label">Đang xử lý</div>
+                </div>
+
+                <div class="stat-card completed">
+                    <div class="stat-icon">
+                        <i class="ri-checkbox-circle-line"></i>
+                    </div>
+                    <div class="stat-value">42</div>
+                    <div class="stat-label">Hoàn thành</div>
+                </div>
+
+                <div class="stat-card overdue">
+                    <div class="stat-icon">
+                        <i class="ri-error-warning-line"></i>
+                    </div>
+                    <div class="stat-value">8</div>
+                    <div class="stat-label">Quá hạn</div>
+                </div>
+            </div>
+
+            <!-- Charts Section -->
+            <div class="charts-section">
+                <div class="chart-container">
+                    <h3 class="chart-title">Biểu đồ tròn trạng thái công việc</h3>
+                    <div class="chart-wrapper">
+                        <canvas id="statusChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="chart-container">
+                    <h3 class="chart-title">Biểu đồ cột theo phòng ban</h3>
+                    <div class="chart-wrapper">
+                        <canvas id="departmentChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Department Statistics Table -->
+            <div class="department-stats">
+                <div class="department-stats-header">
+                    <h2>Thống kê theo phòng ban</h2>
+                    <p>Chi tiết số lượng công việc theo từng phòng ban</p>
+                </div>
+
+                <table class="stats-table">
+                    <thead>
+                        <tr>
+                            <th>Phòng ban</th>
+                            <th>Chưa hoàn thành</th>
+                            <th>Đang xử lý</th>
+                            <th>Hoàn thành</th>
+                            <th>Quá hạn</th>
+                            <th>Tổng cộng</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="department-name">Phòng IT</td>
+                            <td><span class="status-number status-pending">8</span></td>
+                            <td><span class="status-number status-progress">6</span></td>
+                            <td><span class="status-number status-completed">15</span></td>
+                            <td><span class="status-number status-overdue">2</span></td>
+                            <td class="total-tasks">31</td>
+                        </tr>
+                        <tr>
+                            <td class="department-name">Phòng Marketing</td>
+                            <td><span class="status-number status-pending">5</span></td>
+                            <td><span class="status-number status-progress">4</span></td>
+                            <td><span class="status-number status-completed">12</span></td>
+                            <td><span class="status-number status-overdue">3</span></td>
+                            <td class="total-tasks">24</td>
+                        </tr>
+                        <tr>
+                            <td class="department-name">Phòng Kế toán</td>
+                            <td><span class="status-number status-pending">3</span></td>
+                            <td><span class="status-number status-progress">2</span></td>
+                            <td><span class="status-number status-completed">8</span></td>
+                            <td><span class="status-number status-overdue">1</span></td>
+                            <td class="total-tasks">14</td>
+                        </tr>
+                        <tr>
+                            <td class="department-name">Phòng Nhân sự</td>
+                            <td><span class="status-number status-pending">4</span></td>
+                            <td><span class="status-number status-progress">3</span></td>
+                            <td><span class="status-number status-completed">5</span></td>
+                            <td><span class="status-number status-overdue">1</span></td>
+                            <td class="total-tasks">13</td>
+                        </tr>
+                        <tr>
+                            <td class="department-name">Phòng Kinh doanh</td>
+                            <td><span class="status-number status-pending">4</span></td>
+                            <td><span class="status-number status-progress">3</span></td>
+                            <td><span class="status-number status-completed">2</span></td>
+                            <td><span class="status-number status-overdue">1</span></td>
+                            <td class="total-tasks">10</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <section id="Scripts">
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/remix-icons-listing.js"></script>
+        <script src="assets/js/chart.min.js"></script>
+        <script src="assets/js/script.js"></script>
+    </section>
+    <!-- Scripts./ -->
+</body>
+</html>
